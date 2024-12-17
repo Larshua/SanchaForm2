@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+             body {
+              font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              background-image: url("pink.png");
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-attachment: fixed;
+              margin: 10;
+              padding: 0;
+                  }
+
+    .main {
+      padding: 30px;
+      text-align: left;
+      background-color: #f7a9b7; /* Rose Quartz */
+      margin: 40px auto;
+      max-width: 750px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #c13076;
+      font-size: 28px;
+    }
+
+    p {
+      font-style: italic;
+    }
+
+    .form-list {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #4f4f4f;
+    }
+
+    input[type="text"], input[type="radio"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 5px;
+      border: 1px solid #c13076;
+      font-size: 16px;
+      box-sizing: border-box;
+      background-color: rgba(255, 192, 203, 0.464);
+    }
+
+    input[type="text"]:focus {
+      border-color: #92A8D1; /* Serenity */
+      box-shadow: 0 0 5px rgba(146, 168, 209, 0.5);
+    }
+
+    input[type="radio"] {
+      width: auto;
+      margin-right: 5px;
+      border: 1px solid #b65785;
+      background-color: rgba(255, 192, 203, 0.464);
+    }
+
+    .btn-submit {
+      margin-top: 10px;
+      background-color: #c13076; /* Serenity */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      background-color: #ed3990;
+    }
+      </style>
+  </head>
+  <body>
+
+    <div class="main">
+      <h2>Student Registration Form</h2>
+
+    <form id="userForm" action="result.html" method="get">
+      
+      <p>Student Name</p>
+      <div class="form-list">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" value="" required><br>
+      </div>
+
+      <div class="form-list">
+      <label for="mname">Middle Name</label>
+      <input type="text" id="mname" name="mname" value=""><br>
+      </div>
+
+      <div class="form-list">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" value="" required><br>
+      </div>
+
+      <p>Select your Gender</p>
+      <label for="genderMale">Male</label>
+      <input type="radio" id="genderMale" name="mygender" value="Male" required>
+
+      <label for="genderFemale">Female</label>
+      <input type="radio" id="genderFemale" name="mygender" value="Female" required><br>
+
+      <p>Address</p>
+      <div class="form-list">
+      <label for="add"></label>
+      <input type="text" id="add" name="add" value=""><br>
+      </div>
+
+      <p>Mobile Number</p>
+      <div class="form-list">
+      <label for="number"></label>
+      <input type="text" id="number" name="number" value="09"><br>
+      </div>
+
+      <p>Select your Course</p>
+      <input type="radio" id="course1" name="mycourse" value="Diploma in Computer Engineering Technology" required>
+      <label for="course1"> Diploma in Computer Engineering Technology</label><br>
+
+      <input type="radio" id="course2" name="mycourse" value="Diploma in Information Technology" required>
+      <label for="course2"> Diploma in Information Technology</label><br>
+
+      <input type="radio" id="course3" name="mycourse" value="Diploma in Electrical Engineering Technology" required>
+      <label for="course3"> Diploma in Electrical Engineering Technology</label><br>
+
+      <input type="radio" id="course4" name="mycourse" value="Diploma in Mechanical Engineering Technology" required>
+      <label for="course4"> Diploma in Mechanical Engineering Technology</label><br>
+
+      <input type="radio" id="course5" name="mycourse" value="Diploma in Electronics Communications Engineering Technology" required>
+      <label for="course5">Diploma in Electronics Communications Engineering Technology</label><br>
+
+      <input type="radio" id="course6" name="mycourse" value="Diploma in Civil Engineering Technology" required>
+      <label for="course1"> Diploma in Civil Engineering Technology</label><br>
+
+      <input type="radio" id="course7" name="mycourse" value="Diploma in Office Management Technology" required>
+      <label for="course6">Diploma in Office Management Technology</label><br><br>
+
+      <input type="submit" value="Submit" class="btn-submit" id="submitBtn" onclick="displayResult()">
+    </form>
+  </div>
+  </body>
+</html>

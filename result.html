@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    body {
+      font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background-image: url("pink.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 10;
+      padding: 0;
+    }
+
+    .result {
+      padding: 30px;
+      text-align: left;
+      border: 5px dashed #9f74b7;
+      background: url("vender.jpg");
+      background-repeat: no-repeat;
+      margin: 40px auto;
+      max-width: 750px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .result h2 {
+      background-color: #9f74b7; /* Serenity */
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      display: block;
+      width: 95%;
+    
+    }
+
+    .result p {
+      font-size: 18px;
+      color: #333;
+      line-height: 2;
+      margin: 10px 0;
+      font-style: normal;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="result" class="result">
+    <h2>Student Registration Result</h2>
+
+      <p><strong>First Name:</strong> <span id="firstName"></span></p>
+      <p><strong>Middle Name:</strong> <span id="middleName"></span></p>
+      <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+      <p><strong>Gender:</strong> <span id="gender"></span></p>
+      <p><strong>Address:</strong> <span id="address"></span></p>
+      <p><strong>Mobile Number:</strong> <span id="mobileNumber"></span></p>
+      <p><strong>Course:</strong> <span id="course"></span></p>
+
+    <script>
+      function getQueryParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const fname = urlParams.get('fname') || 'Not Provided';
+        const mname = urlParams.get('mname') || 'Not Provided';
+        const lname = urlParams.get('lname') || 'Not Provided';
+        const gender = urlParams.get('mygender') || 'Not Provided';
+        const add = urlParams.get('add') || 'Not Provided';
+        const number = urlParams.get('number') || 'Not Provided';
+        const course = urlParams.get('mycourse') || 'Not Provided';
+
+        document.getElementById('firstName').textContent = fname;
+        document.getElementById('middleName').textContent = mname;
+        document.getElementById('lastName').textContent = lname;
+        document.getElementById('gender').textContent = gender;
+        document.getElementById('address').textContent = add;
+        document.getElementById('mobileNumber').textContent = number;
+        document.getElementById('course').textContent = course;
+      }
+
+      window.onload = getQueryParams;
+    </script>
+    </div>
+
+  </body>
+</html>
